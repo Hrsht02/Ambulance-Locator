@@ -42,7 +42,7 @@ const AmbulanceSearch = () => {
 
   return (
     <div className={`ambulance-container ${query ? "borderless" : ""}`}>
-      <img id="img1" src="src\Ambulance2.png"></img>
+      <img id="img1" src="\Ambulance2.png"></img>
       <h2>Call Your Ambulance</h2>
       <div className="search-box">
         <input
@@ -52,7 +52,7 @@ const AmbulanceSearch = () => {
           onChange={handleSearch}
         />
     </div>
-    <img id="img2" src="src\Img3.png"></img>
+    <img id="img2" src="\Img3.png"></img>
       {filteredAmbulances.length > 0 && (
         <div className="ambulance-list">
           {filteredAmbulances.map((ambulance, index) => (
