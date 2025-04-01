@@ -1,25 +1,18 @@
 /* 📌 Reset Default Margins & Paddings */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
-  background-color: white; /* Light gray background */
+  background-image: url("/img.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   min-height: 100vh;
-  
   width: 100%;
-  background-size: cover;
-}
-
-#img1 {
-  width: 30%
-}
-#img2 {
-  width: 80%;
-  /* padding-top: 30px; */
 }
 
 /* 📌 Page Header Styling */
@@ -27,18 +20,24 @@ h1 {
   margin-top: 20px;
   font-size: 28px;
   color: #333;
+  text-align: center;
 }
 
 /* 📌 Search Bar Styling */
 .search-container {
-  margin: 10px 0; /* Reduced top margin to move it up */
+  margin: 10px 0;
   position: relative;
-  top: -100px; /* Moves it slightly up */
+  top: -80px; /* Adjusted to prevent excessive movement */
+}
+
+.search-box{
+  padding: 20px;
+ 
 }
 
 .search-container input {
-  padding: 10px;
-  width: 250px;
+  padding: 20px;
+  width: 280px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -51,24 +50,18 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 20px;
-
+  padding: 20px;
   color: rgb(85, 1, 1);
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgb(253, 253, 253);
-  transition: border 0.3s ease; /* Smooth transition */
-}
-
-/* 📌 Hide Border When Searching */
-.ambulance-container.borderless {
-  border: none;
+  /* background-color: rgb(253, 253, 253); */
+  text-align: center;
 }
 
 /* 📌 Ambulance List (Grid) */
 .ambulance-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto adjust */
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto adjust */
+  gap: 20px;
   width: 100%;
   max-width: 1100px;
   margin: 20px auto;
@@ -77,14 +70,14 @@ h1 {
 
 /* 📌 Ambulance Card */
 .ambulance-card {
-  background: rgba(247, 151, 151, 0.788);
+  background: rgba(247, 151, 151, 0.9);
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
-  max-width: 300px;
-  min-height: 160px;
+  max-width: 280px;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,21 +85,29 @@ h1 {
   transition: transform 0.2s, background 0.3s ease-in-out;
 }
 
-/* 📌 Ambulance Card Text Color */
+/* 📌 Ambulance Card Text */
 .ambulance-card h3 {
   color: rgb(8, 56, 146);
+  font-size: 1.2rem;
 }
 
 /* 📌 Hover Effect */
 .ambulance-card:hover {
-  transform: scale(1.05);
-  background: rgba(247, 101, 101, 0.9);
+  transform: scale(1.03);
+  background: rgba(247, 101, 101, 0.95);
 }
 
 /* 📌 Responsive Adjustments */
 @media (max-width: 1024px) {
   .ambulance-list {
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ambulance-list {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 15px;
   }
 }
 
